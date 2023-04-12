@@ -1,6 +1,9 @@
-class CreateAdvertisements < ActiveRecord::Migration[7.0]
+class CreateVehicles < ActiveRecord::Migration[7.0]
   def change
-    create_table :advertisements do |t|
+    create_table :vehicles do |t|
+      t.string :brand
+      t.string :model
+      t.decimal :km
 
       t.timestamps
     end
