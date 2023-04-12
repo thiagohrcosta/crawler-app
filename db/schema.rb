@@ -35,12 +35,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_12_015313) do
   end
 
   create_table "vehicles", force: :cascade do |t|
+    t.bigint "lead_id", null: false
     t.string "brand"
     t.string "model"
     t.decimal "km"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["lead_id"], name: "index_vehicles_on_lead_id"
   end
 
   add_foreign_key "accessories", "vehicles"
+  add_foreign_key "vehicles", "leads"
 end
