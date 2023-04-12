@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
 
-  root "pages#index"
+  root "leads#new"
+
+  resources :leads, only: [:new, :create, :show]
 end
