@@ -41,7 +41,7 @@ class LeadGeneratorJob < ApplicationJob
     @formatted_data = {
       name: nil,
       phone: nil,
-      message: "Testado",
+      message: nil,
       selected_vehicle: nil,
       price: nil,
       year: nil,
