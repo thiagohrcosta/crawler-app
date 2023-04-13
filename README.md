@@ -71,4 +71,4 @@ No caso em tela, foi utilizado um link do OLX escolhido aleatoriamente e dispon�
 [Clique aqui](https://mg.olx.com.br/belo-horizonte-e-regiao/autos-e-pecas/carros-vans-e-utilitarios/bmw-320i-2013-2-0-16v-turbo-1171849286?lis=listing_2020) para abrir o link do OLX (obs: o link poderá ficar indisponível). Abaixo é possível ver os dados que foram buscados da referida página web.
 ![enter image description here](https://res.cloudinary.com/dloadb2bx/image/upload/v1681407640/scrap1_xadsj0.png)
 
-Ao realizar o scraping da página acima, os dados como modelo, marca, quilometragem e os itens opcionais são recebidos pelo VehicleGeneratorJob que fica responsável por instanciar um novo veículo vinculado a um Lead já cadastrado cujo link foi objetivo em seu scraping, bem como instancia seus itens opcionais. 
+Ao realizar o scraping da página acima, os dados como modelo, marca, quilometragem e os itens opcionais são recebidos pelo `VehicleGeneratorJob` que fica responsável por instanciar um novo veículo vinculado a um Lead já cadastrado cujo link foi objetivo em seu scraping, bem como instancia seus itens opcionais. 
