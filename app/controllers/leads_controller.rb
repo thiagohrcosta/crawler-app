@@ -13,9 +13,8 @@ class LeadsController < ApplicationController
     file = File.open(params[:lead][:file].path)
     #document = Nokogiri::XML(file)
 
-
     html_file = URI.open(file).read
-    html_doc = Nokogiri::HTML.parse(html_file)
+    html_doc = Nokogiri::HTML.parse(html_file, nil, 'utf-8')
 
     LeadGeneratorJob.perform_now(html_doc)
     binding.pry
