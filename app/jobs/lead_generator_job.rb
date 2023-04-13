@@ -7,7 +7,6 @@ class LeadGeneratorJob < ApplicationJob
 
     generate_data
     parsing_data(raw_data)
-    binding.pry
 
     create_lead
     binding.pry
@@ -20,7 +19,6 @@ class LeadGeneratorJob < ApplicationJob
     raw_data.each_with_index do |x, i|
       x.children.last.content.split("\n\r").each do |line|
         next if line == nil || line == ""
-
         if line.include? "phone"
           @formatted_data[:phone] = line.split("name")[0].split("\nphone:").last.strip
         elsif line.include?  "name"
@@ -31,10 +29,13 @@ class LeadGeneratorJob < ApplicationJob
           @formatted_data[:price] = line.split("price:").last.split("</p>")[0].strip.remove("=2E").to_f
         elsif line.include? "year"
           @formatted_data[:year] = line.split("year:").last.split("</p>")[0].strip
+        elsif (line.include? "link") && @formatted_data[:link].nil?
+          @formatted_data[:link] = line.split("link")[1].remove("\r\n").gsub("=2E", ".").strip.split(" ").last
         else
           next
         end
       end
+      @formatted_data[:message] =  x.children.last.content.split("\n\r")[9].strip.gsub("=2E", ".")
     end
   end
 
@@ -46,12 +47,11 @@ class LeadGeneratorJob < ApplicationJob
       selected_vehicle: nil,
       price: nil,
       year: nil,
-      link: "http://www.google.com"
+      link: nil
     }
   end
 
   def create_lead
-    binding.pry
     @lead = Lead.new
     @lead.name = @formatted_data[:name]
     @lead.phone = @formatted_data[:phone]
@@ -61,12 +61,10 @@ class LeadGeneratorJob < ApplicationJob
     @lead.year = @formatted_data[:year]
     @lead.link = @formatted_data[:link]
 
-    if @lead.save!
-      puts "SUCESSO +====================="
+    if @lead.save
       @lead
     else
-      binding.pry
-      puts "ERROOOOOOOOOOOOOOOOOO"
+      @lead.errors.full_message
     end
   end
 end
