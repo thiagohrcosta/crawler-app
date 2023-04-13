@@ -80,18 +80,18 @@ Não foi utilizada nenhum recurso para a criação de interfaces complexas dado 
 
 ## Referências em meus repositórios no Github
 
-**BackgroundJobs**
+**BackgroundJobs**<br>
 [Sidekiq-background](https://github.com/thiagohrcosta/Sidekiq-background): Pequeno projeto testando e implementando background jobs.
 
-**Scraping**
+**Scraping**<br>
 [Viaggiare-Italia-API](https://github.com/thiagohrcosta/Viaggiare-Italia-API): Neste projeto foi realizado um scraping de dados públicos de cidades italianas e de repositórios de fotos no Unsplash. [Clique aqui](https://github.com/thiagohrcosta/Viaggiare-Italia-API/blob/main/db/seeds.rb) para visualizar. 
 [Scraper Ruby](https://github.com/thiagohrcosta/scraper-ruby): Pequeno projeto para testar o Nokogiri.
 
-**Mailing**
+**Mailing**<br>
 [Ruby Mailing](https://github.com/thiagohrcosta/Mailing): Projeto desenvolvido para testar a utilização do sistema de mailing com RoR.
 
-**Testes**
+**Testes**<br>
 [E-Commerce-API](https://github.com/thiagohrcosta/Ecommerce-Api): Aplicação desenvolvida com mais de 200 testes, inclusive de requests. 
 
-**Frontend**
+**Frontend**<br>
 [Coffee Delivery](https://github.com/thiagohrcosta/Coffee-delivery): Aplicação de delivery desenvolvido com Styled Components.
