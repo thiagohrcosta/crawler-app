@@ -9,8 +9,6 @@ class LeadGeneratorJob < ApplicationJob
     parsing_data(raw_data)
 
     create_lead
-    binding.pry
-    Lead.last.destroy
   end
 
   private
