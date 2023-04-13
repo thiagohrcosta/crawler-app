@@ -72,3 +72,23 @@ No caso em tela, foi utilizado um link do OLX escolhido aleatoriamente e dispon�
 ![enter image description here](https://res.cloudinary.com/dloadb2bx/image/upload/v1681407640/scrap1_xadsj0.png)
 
 Ao realizar o scraping da página acima, os dados como modelo, marca, quilometragem e os itens opcionais são recebidos pelo `VehicleGeneratorJob` que fica responsável por instanciar um novo veículo vinculado a um Lead já cadastrado cujo link foi objetivo em seu scraping, bem como instancia seus itens opcionais. 
+
+## Interface
+Não foi utilizada nenhum recurso para a criação de interfaces complexas dado a simplicidade do frontend, resumindo ao desenvolvimento básico com CSS. 
+
+
+
+## Referências em meus repositórios no Github
+
+**BackgroundJobs**
+[Sidekiq-background](https://github.com/thiagohrcosta/Sidekiq-background)
+
+**Scraping**
+[Viaggiare-Italia-API](https://github.com/thiagohrcosta/Viaggiare-Italia-API): Neste projeto foi realizado um scraping de dados públicos de cidades italianas e de repositórios de fotos no Unsplash. [Clique aqui](https://github.com/thiagohrcosta/Viaggiare-Italia-API/blob/main/db/seeds.rb) para visualizar. 
+[Scraper Ruby](https://github.com/thiagohrcosta/scraper-ruby)
+
+**Mailing**
+[Ruby Mailing](https://github.com/thiagohrcosta/Mailing): Projeto desenvolvido para testar a utilização do sistema de mailing com RoR.
+
+**Testes**
+[E-Commerce-API](https://github.com/thiagohrcosta/Ecommerce-Api): Aplicação desenvolvida com mais de 200 testes, inclusive de requests. 
