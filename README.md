@@ -1,4 +1,5 @@
 # Crawler APP
+![enter image description here](https://res.cloudinary.com/dloadb2bx/image/upload/v1681442700/craw1_k5degk.png)
 
 ## Tecnologias utilizadas
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)  ![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white) ![Rails](https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
@@ -18,7 +19,7 @@ O objetivo do presente projeto é ser capaz de ler um arquivo .eml anexado, ler 
 `	>> email.eml`
 	
 
-    From: "johndoe@test.com" <thiago@test.com>
+    From: "johndoe@test.com" <johndoe@test.com>
     Subject: Meu carro
     To: "sales@sales.com" <sales@sales.com>
     Cc: 
@@ -53,10 +54,8 @@ O objetivo do presente projeto é ser capaz de ler um arquivo .eml anexado, ler 
     Content-Transfer-Encoding: quoted-printable
     
     <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><p=
-    >phone: (31) 3003-4040</p><p>name: Thiago Costa</p><p>vehicle: BMW 320i</p>=
-    <p>price: 100.000</p><p>year: 2022</p><p>link: https://mg.olx.com.br/belo-horizonte-e-regiao/autos-e-pecas/carros-vans-e-utilitarios/bmw-320i-2013-2-0-16v-turbo-1171849286?lis=listing_2020</p><p>Es=
-    tou procurando uma BMW 320i na faixa dos 100 a 200 mil=2E&nbsp;</p><p><br><=
-    /p>
+    >phone: (31) 3003-4040</p><p>name: John Doe</p><p>vehicle: BMW 320i</p>=
+    <p>price: 100.000</p><p>year: 2022</p><p>link: https://mg.olx.com.br/belo-horizonte-e-regiao/autos-e-pecas/carros-vans-e-utilitarios/bmw-320i-2013-2-0-16v-turbo-1171849286?lis=listing_2020</p><p>Estou procurando uma BMW 320i na faixa dos 100 a 200 mil.</p><p><br></p>
     ----_=_NextPart5809_c2918dba-0af9-492b-bce0-190936b46673--
 
 ## Como funciona o sistema?
@@ -69,6 +68,7 @@ Tendo sido criado o `leads_controller.rb`retornará com os dados e agora verific
 No caso em tela, foi utilizado um link do OLX escolhido aleatoriamente e disponível na data de 13 de abril de 2023.
 
 [Clique aqui](https://mg.olx.com.br/belo-horizonte-e-regiao/autos-e-pecas/carros-vans-e-utilitarios/bmw-320i-2013-2-0-16v-turbo-1171849286?lis=listing_2020) para abrir o link do OLX (obs: o link poderá ficar indisponível). Abaixo é possível ver os dados que foram buscados da referida página web.
+<br>
 ![enter image description here](https://res.cloudinary.com/dloadb2bx/image/upload/v1681407640/scrap1_xadsj0.png)
 
 Ao realizar o scraping da página acima, os dados como modelo, marca, quilometragem e os itens opcionais são recebidos pelo `VehicleGeneratorJob` que fica responsável por instanciar um novo veículo vinculado a um Lead já cadastrado cujo link foi objetivo em seu scraping, bem como instancia seus itens opcionais. 
@@ -76,7 +76,10 @@ Ao realizar o scraping da página acima, os dados como modelo, marca, quilometra
 ## Interface
 Não foi utilizada nenhum recurso para a criação de interfaces complexas dado a simplicidade do frontend, resumindo ao desenvolvimento básico com CSS. 
 
+Foi desenvolvida duas telas simples, a primeira e definida como "root" do projeto permite o upload de um arquivo ".eml". Uma vez anexado e tendo os dados sidos extraídos, o usuário é enviado para o dashboard onde pode ver os últimos resultados obtidos. 
+![enter image description here](https://res.cloudinary.com/dloadb2bx/image/upload/v1681443979/craw3_pzhr6q.png)
 
+Não foi implementada a funcionalidade de login com Devise tampouco "policies" de autorização com Pundit, uma vez que o objetivo era realizar o processo de obtenção de dados de arquivos e páginas web. A implementação de autenticação pode ser visto em projetos como [Real State API](https://github.com/thiagohrcosta/tourist-app-API) e autorização no [Restaurants With Pundit](https://github.com/thiagohrcosta/restaurants_with_pundit)
 
 ## Referências em meus repositórios no Github
 

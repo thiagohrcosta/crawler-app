@@ -1,0 +1,54 @@
+<%= render "shared/navbar" %>
+<div class="dashboard-container">
+  <div class="lead-container">
+    <div class="lead-box">
+    <h2>Últimos leads inseridos</h2>
+    <% @leads.each do |lead| %>
+      <div class="lead-card">
+        <div class="lead-card-header">
+          <p>Código: #<%= lead.id %></p>
+          <div class="lead-card-name">
+            <p><%= lead.name %><p>
+          </div>
+        </div>
+        <div class="lead-information">
+          <div class="lead-price">
+            <p>R$ <%= lead.price %></p>
+          </div>
+          <div class="lead-flex-direction">
+            <p>Telefone: <%= lead.phone %></p>
+            <p>Veículo selecionado: <%= lead.selected_vehicle %></p>
+          </div>
+        </div>
+        <div class="lead-message">
+          <p><%= lead.message %></p>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+  <div class="vehicle-container">
+    <div class="vehicle-box">
+      <h2>Veículo</h2>
+      <% @vehicles.each do |vehicle| %>
+        <div class="vehicle-card">
+          <div class="vehicle-card-header">
+            <p>Código #<%= vehicle.id %></p>
+            <div class="vehicle-card-header-info">
+              <p class="vehicle-card-header-model"><%= vehicle.model.truncate(25) %></p>
+              <h5><%= vehicle.brand %></h5>
+            </div>
+          </div>
+          <h2>KM: <%= number_with_delimiter(vehicle.km.to_i, :precision => 2, :delimiter => '.') %></h2>
+          <div class="accessory-container">
+            <% vehicle.accessories.each do |accessory| %>
+              <div class="accessory-card">
+                <p><%= accessory.name %></p>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

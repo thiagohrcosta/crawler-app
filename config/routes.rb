@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   root "leads#new"
 
   resources :leads, only: [:new, :create, :show]
+  resources :dashboards, online: [:index]
 end

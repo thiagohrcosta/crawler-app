@@ -8,7 +8,11 @@ class LeadsController < ApplicationController
   end
 
   def create
-    params[:lead]
+    format_is_valid = params[:lead][:file].headers.include? ".eml"
+
+    if format_is_valid == false
+      return redirect_to new_lead_path, notice: "Formato inválido"
+    end
 
     file = File.open(params[:lead][:file].path)
 
@@ -22,12 +26,7 @@ class LeadsController < ApplicationController
         VehicleGeneratorJob.perform_now(lead)
       end
     end
-  end
-
-  private
-
-  def lead_params
-    params.require(:lead).permit(:name, :phone, :message, :selected_vehicle, :price, :year, :link)
+    redirect_to dashboards_path
   end
 end
   
