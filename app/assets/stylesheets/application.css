@@ -250,5 +250,12 @@
 
   font-size: 12px;
   text-align: center;
-  
+ 
+ }
+
+ .nav-items ul li a {
+  text-decoration: none;
+  color: #05204A;
+  font-size: 18px;
+  font-weight: bold;
  }
