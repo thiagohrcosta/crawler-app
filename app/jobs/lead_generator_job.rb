@@ -24,6 +24,7 @@ class LeadGeneratorJob < ApplicationJob
         elsif line.include? "vehicle"
           @formatted_data[:selected_vehicle] = line.split("vehicle:").last.split("</p>")[0].strip
         elsif line.include? "price"
+          binding.pry
           @formatted_data[:price] = line.split("price:").last.split("</p>")[0].strip.remove("=2E").to_f
         elsif line.include? "year"
           @formatted_data[:year] = line.split("year:").last.split("</p>")[0].strip

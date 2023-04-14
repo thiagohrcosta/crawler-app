@@ -17,7 +17,6 @@ class VehicleGeneratorJob < ApplicationJob
     parsing_data
     create_vehicle
     generate_optionals(vehicle_info)
-    binding.pry
   end
 
   private
@@ -68,7 +67,7 @@ class VehicleGeneratorJob < ApplicationJob
 
     optionals_index_starts_at = vehicle_data.index("Opcionais") + 1
     optionals_index_ends_at = vehicle_data.index("Localização") - 1
-    binding.pry
+
     vehicle_data[optionals_index_starts_at..optionals_index_ends_at].each do |optional|
       @optional = Accessory.create(
         name: optional,

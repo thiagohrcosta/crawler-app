@@ -1,4 +1,11 @@
-<%= simple_form_for @lead do |f| %>
-  <%= f.input  :file, as: :file %>
-  <%= f.button :submit %>
-<% end %>
+<%= render "shared/navbar" %>
+<div class="bg-light">
+  <div class="container">
+    <div class="form-container">
+      <%= simple_form_for @lead do |f| %>
+        <%= f.input  :file, as: :file, label: "Arquivo" %>
+        <%= f.button :submit, "Enviar" %>
+      <% end %>
+    </div>
+  </div>
+</div>

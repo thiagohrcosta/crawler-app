@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_12_015313) do
     t.string "phone"
     t.text "message"
     t.string "selected_vehicle"
-    t.decimal "price"
+    t.string "price"
     t.string "year"
     t.string "link"
     t.datetime "created_at", null: false

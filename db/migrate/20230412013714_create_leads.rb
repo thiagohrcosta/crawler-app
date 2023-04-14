@@ -5,7 +5,7 @@ class CreateLeads < ActiveRecord::Migration[7.0]
       t.string :phone
       t.text :message
       t.string :selected_vehicle
-      t.decimal :price
+      t.string :price
       t.string :year
       t.string :link
 

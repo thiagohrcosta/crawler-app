@@ -19,7 +19,5 @@ RSpec.describe Lead, type: :model do
     it { should validate_length_of(:phone).is_at_most(20) }
     it { should validate_length_of(:selected_vehicle).is_at_most(255) }
     it { should validate_length_of(:year).is_at_most(4) }
-
-    it { should validate_numericality_of(:price).is_greater_than_or_equal_to(0) }
   end
 end

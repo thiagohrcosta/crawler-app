@@ -6,7 +6,7 @@ class Lead < ApplicationRecord
 
   validates :message, presence: true
   validates :selected_vehicle, presence: true, length: { maximum: 255 }
-  validates :price, presence: true, numericality: { greater_than_or_equal_to: 0 }
+  validates :price, presence: true
   validates :year, presence: true, length: { maximum: 4 }
 
   validates :link, presence: true

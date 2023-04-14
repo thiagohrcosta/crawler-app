@@ -14,4 +14,204 @@
  *= require_self
  */
 
+ html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: #E0F2E9;
+ }
+
+ .navbar {
+  height: 45px;
+  width: 1028px;
+
+  margin: 0 auto;
+  
+  display: flex;
+  justify-content: space-between;
+ }
+
+ .logo {
+  background: #05204A;
+  color: #E0F2E9;
+  border-radius: 8px;
+  
+  padding: 5px 15px;
+  margin: 5px 0;
+
+  font-weight: bold;
+  font-size: 22px;
+ }
+
+ .nav-items {
+  display: flex;
+  align-items: center;
+ }
+
+ .nav-items ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+ }
+
+.nav-items ul li {
+  margin: 0 10px;
+  padding: 0;
+}
+
+ .bg-light {
+  height: calc(100vh - 45px);
+ }
  
+ .container {
+  width: 1028px;
+  margin: 0 auto;
+ }
+
+ .form-container {
+  height: calc(90vh - 45px);
+  margin: 20px 0;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  border: 1px solid #05204A;
+  border-radius: 8px;
+  box-shadow: 8px 8px 0px #02020A;
+ }
+
+ .form-container label {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+ }
+
+ .form-container input {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+ }
+
+ .form-container input[type="submit"] {
+  width: 100%;
+  height: 40px;
+  
+  color: #05204A;
+  background: #E0F2E9;
+  border-radius: 8px;
+
+  border: 1px solid #05204A;
+  box-shadow: 8px 8px 0px #02020A;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 22px;
+  
+  cursor: pointer;
+ }
+
+ .form-container input[type="submit"]:hover {
+  background: #05204A;
+  color: #E0F2E9;
+
+  cursor: pointer;
+ } 
+
+ .dashboard-container {
+  height: calc(90vh - 45px);
+  margin: 20px auto;
+  width: 1028px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+ }
+
+ .lead-container {
+  width: 60%;
+ }
+
+ .lead-box {
+  display: flex;
+  flex-direction: column;
+ }
+
+ .lead-card {
+  margin: 15px 0;
+  padding: 10px;
+
+  width: 100%;
+  
+  border: 1px solid #05204A;
+  box-shadow: 8px 8px 0px #02020A;
+ }
+
+ .lead-card-header {
+  display: flex;
+  justify-content: space-between;
+ }
+
+ .lead-card-name p {
+  font-size: 18px;
+  font-weight: bold;
+ }
+
+ .lead-information {
+  display: flex;
+  justify-content: space-between;
+ }
+
+ .lead-flex-direction {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+
+  line-height: 0px;
+ }
+
+ .vehicle-container {
+  width: 40%;
+ }
+
+ .vehicle-box {
+  display: flex;
+  flex-direction: column;
+ }
+
+ .vehicle-card {
+  margin: 15px 0;
+  padding: 10px;
+
+  width: 100%;
+  
+  border: 1px solid #05204A;
+  box-shadow: 8px 8px 0px #02020A;
+ }
+
+ .vehicle-card-header {
+  display: flex;
+  justify-content: space-between;
+ }
+
+ .vehicle-card-header-info {
+  line-height: 0px;
+ }
+
+ .vehicle-card-header-info h5 {
+  text-align: right;
+  font-weight: lighter;
+  color: #938581;
+ }
+
+ .vehicle-card-header-model {
+  color: #05204A;
+  font-size: 18px;
+  font-weight: bold;
+ }
