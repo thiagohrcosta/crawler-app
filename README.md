@@ -81,6 +81,33 @@ Foi desenvolvida duas telas simples, a primeira e definida como "root" do projet
 
 Não foi implementada a funcionalidade de login com Devise tampouco "policies" de autorização com Pundit, uma vez que o objetivo era realizar o processo de obtenção de dados de arquivos e páginas web. A implementação de autenticação pode ser visto em projetos como [Real State API](https://github.com/thiagohrcosta/tourist-app-API) e autorização no [Restaurants With Pundit](https://github.com/thiagohrcosta/restaurants_with_pundit)
 
+## .Env keys
+Para a execução correta do projeto, será necessário adicionar um arquivo .env com as seguintes chaves:
+
+    REDIS_URL_SIDEKIQ=redis://redis:6379/1
+    REDIS_HOST=redis
+   
+   Lembre-se de adicionar no .gitignore o arquivo .env. 
+<br>
+## Como rodar o projeto?
+Este projeto roda com Docker. O arquivo `docker-compose.yml`, contém todas as informações dos containers que irão subir com a aplicação, neste caso:
+
+    Banco de dados PostgreSQL
+    Redis
+    Sidekiq
+    Web (a aplicação)
+
+Faça o clone do projeto , acesse a pasta e rode o comando `docker-compose build` para que sejam rodados todos os comandos necessários tais como bundle install, yarn install, entre outros. Ao final, concluído o comando anterior rode o comando `docker-compose up` para subir a aplicação.
+
+Caso decida efetuar testes ("*debugar*") em tempo real na aplicação com o `pry`, suba a aplicação com o comando `docker-compose run --service-ports web`. 
+
+## Comandos importantes com Docker
+**Acessar o terminal do rails:** docker-compose run web rails c
+**Listar rotas**: docker-compose run web rails routes -c "nome do controller"
+**Iniciar o projeto e containers**: docker-compose build
+**Subir a aplicação**: docker-compose up
+
+
 ## Referências em meus repositórios no Github
 
 **BackgroundJobs**<br>
