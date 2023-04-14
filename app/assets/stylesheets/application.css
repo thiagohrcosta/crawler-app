@@ -168,6 +168,19 @@
   justify-content: space-between;
  }
 
+ .lead-price {
+  width: 200px;
+  background: #05204A;
+  color: #fff;
+
+  font-weight: bold;
+  font-size: 18px;
+
+  padding: 5px 10px;
+  border-radius: 8px;
+  
+  text-align: center;
+ }
  .lead-flex-direction {
   display: flex;
   flex-direction: column;
@@ -214,4 +227,28 @@
   color: #05204A;
   font-size: 18px;
   font-weight: bold;
+ }
+
+ .accessory-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin: 10px;
+ }
+
+ .accessory-card {
+  background: #05204A;
+  color: #fff;
+
+  margin: 10px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+  text-align: center;
+  
  }

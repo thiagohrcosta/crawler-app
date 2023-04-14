@@ -26,6 +26,7 @@ class LeadsController < ApplicationController
         VehicleGeneratorJob.perform_now(lead)
       end
     end
+    redirect_to dashboards_path
   end
 end
   

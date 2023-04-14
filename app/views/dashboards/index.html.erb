@@ -12,8 +12,8 @@
           </div>
         </div>
         <div class="lead-information">
-          <div>
-            <p><%= lead.price %></p>
+          <div class="lead-price">
+            <p>R$ <%= lead.price %></p>
           </div>
           <div class="lead-flex-direction">
             <p>Telefone: <%= lead.phone %></p>
@@ -35,11 +35,18 @@
           <div class="vehicle-card-header">
             <p>Código #<%= vehicle.id %></p>
             <div class="vehicle-card-header-info">
-              <p class="vehicle-card-header-model"><%= vehicle.model %></p>
+              <p class="vehicle-card-header-model"><%= vehicle.model.truncate(25) %></p>
               <h5><%= vehicle.brand %></h5>
             </div>
           </div>
-          <h2>KM: <%= vehicle.km %></h2>
+          <h2>KM: <%= number_with_delimiter(vehicle.km.to_i, :precision => 2, :delimiter => '.') %></h2>
+          <div class="accessory-container">
+            <% vehicle.accessories.each do |accessory| %>
+              <div class="accessory-card">
+                <p><%= accessory.name %></p>
+              </div>
+            <% end %>
+          </div>
         </div>
       <% end %>
     </div>
