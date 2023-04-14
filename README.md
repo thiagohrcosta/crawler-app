@@ -4,7 +4,7 @@
 ## Tecnologias utilizadas
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)  ![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white) ![Rails](https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
 
-O presente projeto foi desenvolvido utilizando [Docker](https://www.docker.com/), adotando como linguagem de programação o [Ruby on Rails](https://rubyonrails.org/), com o banco de dados [PostgreSQL](https://www.postgresql.org/). Para os background jobs foram utilizados o [Redis](https://redis.io/) e [Sidekiq](https://github.com/sidekiq/sidekiq). 
+O presente projeto foi desenvolvido utilizando [Docker](https://www.docker.com/), adotando como linguagem de programação o [Ruby on Rails](https://rubyonrails.org/), com o banco de dados [PostgreSQL](https://www.postgresql.org/). Para os background jobs foram utilizados o [Redis](https://redis.io/) e [Sidekiq](https://github.com/sidekiq/sidekiq).  O objetivo final foi criar um MVP, ou seja, um produto minimamente viável que execute uma determinada tarefa pré-definida como prova de conceito. Foram gastas cerca de oito horas de trabalho no projeto.  
 
 ### Gems utilizadas que merecem destaque
 [Pry](https://github.com/pry/pry):  Para depurar a aplicação. 
@@ -102,10 +102,10 @@ Faça o clone do projeto , acesse a pasta e rode o comando `docker-compose build
 Caso decida efetuar testes ("*debugar*") em tempo real na aplicação com o `pry`, suba a aplicação com o comando `docker-compose run --service-ports web`. 
 
 ## Comandos importantes com Docker
-**Acessar o terminal do rails:** docker-compose run web rails c
-**Listar rotas**: docker-compose run web rails routes -c "nome do controller"
-**Iniciar o projeto e containers**: docker-compose build
-**Subir a aplicação**: docker-compose up
+**Acessar o terminal do rails:** docker-compose run web rails c <br>
+**Listar rotas**: docker-compose run web rails routes -c "nome do controller" <br>
+**Iniciar o projeto e containers**: docker-compose build <br>
+**Subir a aplicação**: docker-compose up <br>
 
 
 ## Referências em meus repositórios no Github
