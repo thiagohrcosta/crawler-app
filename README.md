@@ -102,10 +102,10 @@ Faça o clone do projeto , acesse a pasta e rode o comando `docker-compose build
 Caso decida efetuar testes ("*debugar*") em tempo real na aplicação com o `pry`, suba a aplicação com o comando `docker-compose run --service-ports web`. 
 
 ## Comandos importantes com Docker
-**Acessar o terminal do rails:** docker-compose run web rails c
-**Listar rotas**: docker-compose run web rails routes -c "nome do controller"
-**Iniciar o projeto e containers**: docker-compose build
-**Subir a aplicação**: docker-compose up
+**Acessar o terminal do rails:** docker-compose run web rails c <br>
+**Listar rotas**: docker-compose run web rails routes -c "nome do controller" <br>
+**Iniciar o projeto e containers**: docker-compose build <br>
+**Subir a aplicação**: docker-compose up <br>
 
 
 ## Referências em meus repositórios no Github
